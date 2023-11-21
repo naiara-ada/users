@@ -48,7 +48,7 @@ table {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #eae9e9;
   margin: 0;
   padding: 20px;
 }
@@ -71,16 +71,18 @@ h1 {
 
 li{
   list-style: none;
+  background-color: #fff;
 }
 
 img{
   height: 100px;
   width: 100px;
+  border-radius: 7px;
 }
 .contenedor{
   width: 350px;
   border: 2px solid #cdcbcb;
-  border-radius: 5px;
+  border-radius: 7px;
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
@@ -96,7 +98,7 @@ img{
 
 .datosPersonales{
   border: 2px solid #cdcbcb;
-  border-radius: 5px;
+  border-radius: 7px;
   width: 70%;
 }
 p{

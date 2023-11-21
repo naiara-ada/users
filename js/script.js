@@ -21,6 +21,7 @@ const getUsers = ()=>{
             })
             console.log(usersData);
             for (let data of usersData){
+                const {street, suite, city} = data.address; 
                 const template = `
                     <li class="contenedor"> 
                         <div class="cabecera">                   
@@ -33,13 +34,16 @@ const getUsers = ()=>{
                         </div> 
                         <img src="${data.image}" alt="${data.name}" /></div>
                         <p><span>Compañia:</span> ${data.company.name}</p>
-                        <p><span>Dirección:</span> ${data.address.street}, ${data.address.suite}, ${data.address.city}</p>
+                        <p><span>Dirección:</span> ${street}, ${suite}, ${city}</p>
                     </li>
                 `
                 userList.innerHTML += template
 
             }
            
+        })
+        .catch (error =>{
+            userList.innerHTML = 'Error en la solicitud';
         })
 }
 
